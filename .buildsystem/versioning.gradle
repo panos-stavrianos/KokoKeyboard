@@ -10,7 +10,7 @@ ext.getVersionCode = { ->
         return Integer.parseInt(stdout.toString().trim())
     }
     catch (ignored) {
-        return -1;
+        return -1
     }
 }
 
@@ -24,11 +24,11 @@ ext.getVersionName = { ->
         return stdout.toString().trim()
     }
     catch (ignored) {
-        return null;
+        return null
     }
 }
 
-task showVersion << {
+task showVersion {
     // Use inherited method
     println 'VersionName: ' + getVersionName()
 }
